@@ -1,0 +1,31 @@
+<table> <!--Doctors in a table-->
+    <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+    </tr>
+    <tr *ngFor="let doc of doctors">
+        <td>{{doc.name}}</td>
+        <td>{{doc.specialization}}</td>
+    </tr>
+</table><br><br>
+
+<table> <!--Patients in a table-->
+    <tr>
+        <th>Name</th>
+        <th>Ilness</th>
+    </tr>
+    <tr *ngFor="let patient of patients">
+        <td>{{patient.name}}</td>
+        <td>{{patient.illness}}</td>
+    </tr>
+</table><br><br>
+
+<!--Total number of doctors-->
+<p>The total number of patients is {{GetPatients()}}</p>
+
+<!--Total number of patients-->
+<p>The total number of doctors is {{GetDoctors()}}</p>
+
+<!--Total number of doctors and patients-->
+<p>The total number of doctors and patients in the hospital is {{GetDoctors() + GetPatients()}}</p>
+
